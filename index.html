@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Bargain Beacon: Black Friday 2026 deals, checked today</title>
+<link rel="stylesheet" href="style.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="beacon" aria-hidden="true">◎</span>
+    <div>
+      <h1>Bargain Beacon</h1>
+      <p class="tagline">Black Friday 2026 deals, each one checked today</p>
+    </div>
+  </div>
+  <p class="stamp">Prices read 27 Nov 2026 (Black Friday) from the store or a deals source naming the store. Links go to the store.</p>
+</header>
+<main id="app">
+  <section class="controls" aria-label="Search and filters">
+    <input id="search" type="search" placeholder="Search a product, e.g. AirPods" aria-label="Search deals">
+    <label>Category
+      <select id="category" aria-label="Filter by category"></select>
+    </label>
+    <label>Store
+      <select id="store" aria-label="Filter by store"></select>
+    </label>
+    <label>Discount
+      <select id="discount" aria-label="Filter by discount">
+        <option value="0">Any discount</option>
+        <option value="25">25% off or more</option>
+        <option value="40">40% off or more</option>
+        <option value="50">50% off or more</option>
+      </select>
+    </label>
+    <label>Sort
+      <select id="sort" aria-label="Sort deals">
+        <option value="discount">Best discount first</option>
+        <option value="saving">Biggest saving first</option>
+        <option value="price">Lowest price first</option>
+      </select>
+    </label>
+  </section>
+  <p id="count" class="count" role="status"></p>
+  <section id="best" aria-label="Best deals">
+    <h2>Best deals right now</h2>
+    <div id="best-list" class="grid"></div>
+  </section>
+  <section id="all" aria-label="All deals">
+    <h2>All deals</h2>
+    <div id="deal-list" class="grid"></div>
+  </section>
+  <section id="detail" class="detail" aria-label="Deal detail" hidden></section>
+</main>
+<footer>
+  <p>36 deals checked 27 Nov 2026. A deal is listed only when a store page or a deals source naming the store showed its price. Discounts are computed from the two prices shown. Prices change fast; confirm at checkout.</p>
+  <p><a href="#/">Back to all deals</a></p>
+</footer>
+</body>
+</html>
